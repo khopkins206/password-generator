@@ -1,15 +1,8 @@
 var specialCharacters = "!@#$%^&*()";
-var generateButton = document.querySelector("#generate");
+var generateButton = document.getElementById("generate");
 
-generateButton.addEventListener("click", writePassword());
+generateButton.addEventListener("click", generatePassword);
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 function generatePassword() {
   var passwordLength = prompt("How many characters would you like in your password?");
@@ -78,14 +71,12 @@ function generatePassword() {
 
   }
 
-  // empty string variable for the for loop below
   var randomPasswordGenerated = "";
 
   for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
     var randomNumberPicked = Math.floor(Math.random() * 4);
 
     randomPasswordGenerated += randomNumberPicked;
-
   }
 
   randomPasswordGenerated += minimumNumbers;
@@ -94,6 +85,8 @@ function generatePassword() {
   randomPasswordGenerated += minimumSpecialCharacters;
 
 
-  return randomPasswordGenerated;
+  document.getElementById("password").innerHTML = randomPasswordGenerated;
+      console.log(randomPasswordGenerated)
+
 
 }
