@@ -28,7 +28,7 @@ THEN the password is either displayed in an alert or written to the page.
 ```
 ## Screenshot
 
-<a src="assets/images/password-website-screenshot.png">
+<img src="assets/images/password-website-screenshot.png">
 
 ## Link to Deployed Project
 
