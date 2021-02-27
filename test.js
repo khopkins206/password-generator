@@ -1,67 +1,109 @@
+
 var specialCharacters = "!@#$%^&*()";
-var generateButton = document.querySelector("#generate");
+var generateButton = document.getElementById("generate");
 
-generateButton.addEventListener("click", writePassword());
-var specialCharacters = ["!","@","#","$","%","^","&","*","(",")"];
-var numbers = [ ];
-var capitalLetters = [ ];
-var lowerCase = [ ];
+generateButton.addEventListener("click", generatePassword);
 
+var password = false
+var numChoice = false
+var upperChoice = false
+var lowerChoice = false
+var charChoice = false
 
-var random1 = [specialCharacters, numbers,capitalLetters,lowerCase];
-var random2 = [specialCharacters, numbers,capitalLetters];
-var random3 = []
-Etc etc...
+// function generatePassword() {
+//   var passwordLength = prompt("How many characters would you like in your password?");
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//   var numbers = confirm("Do you want numbers in your password?");
 
-  passwordText.value = password;
+//   var lowerCases = confirm("Do you want lowercases in your password?");
 
-}
+//   var upperCases = confirm("Do you want uppercases in your password?");
 
-function generatePassword() {
-  var passwordLength = prompt("How many characters would you like in your password?");
+//   var special = confirm("Do you want special characters in your password?");
 
-  var numbers = confirm("Do you want numbers in your password?");
-@@ -22,6 +27,23 @@ function generatePassword() {
-
-  var special = confirm("Do you want special characters in your password?");
+//   var minimumCount;
 
 
-if(specialCharaters, numbers, capitalLetters, !lowerCase) {
-   var randomValue = "";
-   for(var i = 0; i < userInput.lenth; i++) {
-       randomValue += special[Math.floor(Math.random() * random2.length)];
-      }
-} else if { !specialCharaters, numbers, capitalLetters, lowerCase) {
-   var randomValue = "";
-   for(var i = 0; i < userInput.lenth; i++) {
-       randomValue += special[Math.floor(Math.random() * random2.length)];
+  // Empty minimums
 
-} else if { specialCharaters, !numbers, capitalLetters, lowerCase) {
-   var randomValue = "";
-   for(var i = 0; i < userInput.lenth; i++) {
-       randomValue += special[Math.floor(Math.random() * random2.length)];
+  var minimumNumbers = "";
+  var minimumLowerCases = "";
+  var minimumUpperCases = "";
+  var minimumSpecialCharacters = "";
 
-        } else if{specialCharaters, numbers, !capitalLetters, lowerCase) {
-   var randomValue = "";
-   for(var i = 0; i < userInput.lenth; i++) {
-       randomValue += special[Math.floor(Math.random() * random2.length)];
+
+
+  function startPW() {
+    var password = ""
+    var pwChoice = []
+
+prompt("How many characters would you like in your password?")
+    if (passwordLength >= 8 && passwordLength <= 128) {
+      password == true
+  }
+
+    confirm("Do you want uppercases in your password?")
+    if (upperCases === true)
+      upperChoice == true
   
-}
+  };
+
+  // Checks to make sure user selected okay 
+
+  // if (passwordLength >= 8 && passwordLength <= 128) {
+  //   getPasswordLength = functionArray.getPasswordLength();
+  //   console.log(passwordLength)
+  // }
+
+  // if (numbers === true) {
+  //   minimumNumbers = functionArray.getNumbers();
+  //   minimumCount++;
+
+  // }
+  
+  // if (lowerCases === true) {
+  //   minimumLowerCases = functionArray.getLowerCases();
+  //   minimumCount++;
+
+  // }
+
+  // if (upperCases === true) {
+  //   minimumUpperCases = functionArray.getUpperCases();
+  //   minimumCount++;
+
+  // }
+
+  // if (special === true) {
+  //   minimumSpecialCharacters = functionArray.getSpecialCharacters();
+  //   minimumCount++;
+
+  } 
+
+  // generate password
+
+  
+
+  var randomPasswordGenerated = "";
+
+
+  randomPasswordGenerated += minimumNumbers;
+  randomPasswordGenerated += minimumLowerCases;
+  randomPasswordGenerated += minimumUpperCases;
+  randomPasswordGenerated += minimumSpecialCharacters;
+
+
+  var charCount = functionArray.getPasswordLength()
+
+  for (let i = 0; i < (charCount - minimumCount); i++) {
+    var randomNumberPicked = Math.floor(Math.random() * 4);
+
+    randomPasswordGenerated += randomNumberPicked;
+    console.log(randomPasswordGenerated)
+  }
+
+
+  document.getElementById("password").innerHTML = randomPasswordGenerated;
+      console.log(randomPasswordGenerated)
 
 
 }
-
-function generatePassword() {
-
-  var minimumCount = 0;
-
-
-@@ -97,3 +119,4 @@ function generatePassword() {
-  return randomPasswordGenerated;
-
-}
-generateButton.addEventListener("click", writePassword());

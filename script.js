@@ -1,4 +1,10 @@
-var specialCharacters = "!@#$%^&*()";
+var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+// var numChoice = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// var lowerChoice = "abcdefghijklmnopqrstuvwxyz".split("")
+// var upperChoice = "ABCDEFGHIJKLMNOPQRSTUVQXYZ".split("")
+// console.log(upperChoice)
+var passwordContinue;
+
 var generateButton = document.getElementById("generate");
 
 generateButton.addEventListener("click", generatePassword);
@@ -7,6 +13,11 @@ generateButton.addEventListener("click", generatePassword);
 function generatePassword() {
   var passwordLength = prompt("How many characters would you like in your password?");
 
+if (passwordLength < 8) {
+  alert("Password length must be more than 8 character");
+  return;
+}
+        
   var numbers = confirm("Do you want numbers in your password?");
 
   var lowerCases = confirm("Do you want lowercases in your password?");
