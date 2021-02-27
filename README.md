@@ -25,12 +25,10 @@ THEN the password is either displayed in an alert or written to the page.
 
 ```
 
+```
 ## Screenshot
 
-<img src="assets/images/password-website-screenshot.png" width="200" alt="Website Screenshot">
-
-```
-
+<a src="assets/images/password-website-screenshot.png">
 
 ## Link to Deployed Project
 
